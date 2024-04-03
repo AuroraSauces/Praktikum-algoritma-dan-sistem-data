@@ -1,4 +1,4 @@
-package P7;
+package TestSearching;
 import java.util.Scanner;
 
 public class BukuMain26 {
@@ -28,7 +28,7 @@ public class BukuMain26 {
             data.tambah(m);
         } 
         System.out.println("-------------------------------------");
-        System.out.println("Data Keseluruhan Mahasiswa : ");
+        System.out.println("Data Keseluruhan Buku : ");
         data.tampil();
 
         System.out.println("________________________");
@@ -40,5 +40,20 @@ public class BukuMain26 {
         System.out.println("menggunakan sequential Search");
         int posisi = data.FindSeqSearch(cari);
         data.Tampilposisi(cari, posisi);
+        data.TampilData(cari, posisi);
+
+       System.out.print("Masukkan Judul Buku : ");
+       String Carijudul = s1.nextLine();
+
+       BukuNo26 dataBuku = data.FindBuku(Carijudul);
+       dataBuku.tampilDataBuku();
+
+       System.out.println("===================");
+       System.out.println("Menggunakan Binary Search");
+       posisi = data.findBinarySearch(cari, 0 , jumBuku -1);
+        data.Tampilposisi(cari, posisi);
+        data.TampilData(cari, posisi);
+        s.close();
+        s1.close();
     }
 }

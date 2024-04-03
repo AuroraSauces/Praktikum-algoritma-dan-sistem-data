@@ -1,4 +1,4 @@
-package P7;
+package TestSearching;
 
 public class BukuNo26 {
    
